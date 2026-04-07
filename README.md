@@ -1,0 +1,1 @@
+This website was created as part of a course to practice and improve my skills in vanilla JavaScript. It focuses on applying core concepts without relying on external libraries or frameworks.

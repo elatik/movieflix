@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOVIEFLIX - Movie Streaming Platform</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a class="logo" href="/">
+        <span class="logo-text">MOVIEFLIX</span>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/">Movies</a></li>
+          <li><a href="shows.html" class="active">Series</a></li>
+        </ul>
+
+        <!-- THEME TOGGLE -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle theme"
+          title="Toggle dark/light mode"
+        >
+          <div class="toggle-track"></div>
+          <div class="toggle-thumb">
+            <!-- Moon -->
+            <svg class="moon-icon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+            </svg>
+            <!-- Sun -->
+            <svg class="sun-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5" />
+              <line
+                x1="12"
+                y1="1"
+                x2="12"
+                y2="3"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="12"
+                y1="21"
+                x2="12"
+                y2="23"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="4.22"
+                y1="4.22"
+                x2="5.64"
+                y2="5.64"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="18.36"
+                y1="18.36"
+                x2="19.78"
+                y2="19.78"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="1"
+                y1="12"
+                x2="3"
+                y2="12"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="21"
+                y1="12"
+                x2="23"
+                y2="12"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="4.22"
+                y1="19.78"
+                x2="5.64"
+                y2="18.36"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="18.36"
+                y1="5.64"
+                x2="19.78"
+                y2="4.22"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <img class="hero-image" src="Images/HeroImage.jpg" alt="Hero Banner" />
+      <div class="hero-gradient"></div>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <!-- Tabs -->
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <button class="tab" onclick="setTab(this)">Movies</button>
+          <button class="tab active" onclick="setTab(this)">Series</button>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="search-bar">
+        <div class="search-input-wrap">
+          <svg
+            class="search-icon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Search for movies or series…"
+          />
+        </div>
+        <a href="search.html" class="search-btn-link">
+          <button class="search-btn">Search</button>
+        </a>
+      </div>
+
+      <!-- Grid -->
+      <div class="movie-grid" id="movieGrid">
+        <div class="movie-card">
+          <div class="card-poster">
+            <img src="Images/NoImage.png" alt="Show Title" loading="lazy"/>
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=1" class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Show Title</div>
+            <div class="card-genre">Genre</div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="card-poster">
+            <img src="Images/NoImage.png" alt="Show Title" loading="lazy"/>
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=1" class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Show Title</div>
+            <div class="card-genre">Genre</div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="card-poster">
+            <img src="Images/NoImage.png" alt="Show Title" loading="lazy"/>
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=1" class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Show Title</div>
+            <div class="card-genre">Genre</div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="card-poster">
+            <img src="Images/NoImage.png" alt="Show Title" loading="lazy"/>
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=1" class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Show Title</div>
+            <div class="card-genre">Genre</div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="card-poster">
+            <img src="Images/NoImage.png" alt="Show Title" loading="lazy"/>
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=1" class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Show Title</div>
+            <div class="card-genre">Genre</div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="card-poster">
+            <img src="Images/NoImage.png" alt="Show Title" loading="lazy"/>
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=1" class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Show Title</div>
+            <div class="card-genre">Genre</div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="card-poster">
+            <img src="Images/NoImage.png" alt="Show Title" loading="lazy"/>
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=1" class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Show Title</div>
+            <div class="card-genre">Genre</div>
+          </div>
+        </div>
+        <div class="movie-card">
+          <div class="card-poster">
+            <img src="Images/NoImage.png" alt="Show Title" loading="lazy"/>
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=1" class="play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Show Title</div>
+            <div class="card-genre">Genre</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>© 2026 MOVIEFLIX. All rights reserved.</footer>
+    
+    <!-- Spinner -->
+    <div class="spinner"></div>
+  </body>
+</html>
