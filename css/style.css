@@ -450,7 +450,7 @@ main {
   transition: color var(--transition);
 }
 
-.card-genre {
+.card-date {
   font-size: 11.5px;
   color: var(--text2);
   margin-top: 3px;
