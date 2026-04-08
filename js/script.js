@@ -15,6 +15,8 @@ const global = {
   currentPage: window.location.pathname,
 };
 
+
+// Display popular movies
 async function displayPopularMovies() {
   const { results } = await fetchAPIData("movie/popular");
   results.forEach((movie) => {
@@ -41,16 +43,55 @@ async function displayPopularMovies() {
   });
 }
 
+// Display popular TV shows
+async function displayPopularTVShows() {
+  const { results } = await fetchAPIData("tv/popular");
+  console.log(results);
+  results.forEach((show) => {
+    const div = document.createElement("div");
+    div.classList.add("movie-card");
+    const posterImage = show.poster_path ? `https://image.tmdb.org/t/p/w500${show.poster_path}` : "/images/NoImage.png";
+    div.innerHTML = `
+          <div class="card-poster">
+            <img src="${posterImage}" alt="${show.name}" loading="lazy" />
+            <div class="card-overlay">
+              <a href="/tv-details.html?id=${show.id}" class="play-btn">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-title">${show.name}</div>
+            <div class="card-date">${show.first_air_date}</div>
+          </div>
+    `;
+    document.getElementById("movieGrid").appendChild(div);
+  });
+}
+
 // Fetch data from TMDB API
 async function fetchAPIData(endpoint) {
   // API key
   const API_KEY = "c2c40e0f8827f0ad88e3922f3cc17ce6";
   const API_URL = `https://api.themoviedb.org/3/`;
+  showSpinner();
   const response = await fetch(
     `${API_URL}${endpoint}?api_key=${API_KEY}&language=en-US`,
   );
   const data = await response.json();
+  removeSpinner();
   return data;
+}
+
+// Show and remove Spinner
+function showSpinner() {
+  document.querySelector('.spinner').classList.add('show');
+}
+
+function removeSpinner() {
+  document.querySelector('.spinner').classList.remove('show');
 }
 
 // Highlight active nav link
@@ -71,7 +112,7 @@ function init() {
       displayPopularMovies();
       break;
     case "/shows.html":
-      console.log("TV Shows");
+      displayPopularTVShows();
       break;
     case "/movie-details.html":
       console.log("Movie Details");
