@@ -107,7 +107,6 @@
       </div>
     </nav>
 
-    
     <!-- MAIN -->
     <main>
       <!-- Tabs -->
@@ -146,81 +145,62 @@
 
       <!-- Grid -->
       <div class="movie-detail">
-      <div class="movie-header">
-        <div class="movie-title-section">
-          <h1 class="movie-title">Show Title</h1>
-          <p class="movie-genre">Genre</p>
-        </div>
-        <div class="movie-rating"><strong>7.4</strong> <span>/ 10</span></div>
-      </div>
-
-      <div class="movie-content">
-        <div class="movie-poster">
-          <img
-            src="Images/NoImage.png"
-            alt="Show Title Poster"
-          />
+        <div class="movie-header">
+          <div class="movie-title-section">
+            <h1 id="show-title" class="movie-title">Show Title</h1>
+            <p id="show-genre" class="movie-genre">Genre</p>
+          </div>
+          <div class="movie-rating">
+            <strong id="show-rating">7.4</strong> <span>/ 10</span>
+          </div>
         </div>
 
-        <div class="movie-info">
-          <h2 class="section-title">About the Show</h2>
-          <p class="movie-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ullam enim harum dolor hic culpa repellat, vitae fugiat reprehenderit voluptas labore illo inventore dolorem similique ab laboriosam non reiciendis ipsa animi debitis ducimus temporibus veniam quasi. Blanditiis velit doloribus aut.
-          </p>
+        <div class="movie-content">
+          <div class="movie-poster">
+            <img
+              id="show-poster"
+              src="Images/NoImage.png"
+              alt="Show Title Poster"
+            />
+          </div>
 
-          <div class="credits-grid">
-            <div class="credit-item">
-              <h4>Actors</h4>
-              <ul>
-                <li>Actor 1</li>
-                <li>Actor 2</li>
-                <li>Actor 3</li>
-                <li>Actor 4</li>
-                <li>Actor 5</li>
-              </ul>
-              <span class="more-link">More</span>
-            </div>
+          <div class="movie-info">
+            <h2 class="section-title">About the Show</h2>
+            <p id="show-overview" class="movie-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+              ullam enim harum dolor hic culpa repellat, vitae fugiat
+              reprehenderit voluptas labore illo inventore dolorem similique ab
+              laboriosam non reiciendis ipsa animi debitis ducimus temporibus
+              veniam quasi. Blanditiis velit doloribus aut.
+            </p>
 
-            <div class="credit-item">
-              <h4>Director</h4>
-              <ul>
-                <li>Director 1</li>
-              </ul>
-              <h4 style="margin-top: 20px">Screenwriter</h4>
-              <ul>
-                <li>Screenwriter 1</li>
-              </ul>
-            </div>
-
-            <div class="credit-item">
-              <h4>Producers</h4>
-              <ul>
-                <li>Producer 1</li>
-                <li>Producer 2</li>
-              </ul>
+            <div class="credits-grid">
+              <div class="credit-item">
+                <h4>Actors</h4>
+                <ul id="actorsList"></ul>
+                <span id="actorsMoreLink" class="more-link">More</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="movie-actions">
-        <div class="price-section">
-          <span class="price">$19.00</span>
-          <button class="buy-button">BUY</button>
+        <div class="movie-actions">
+          <div class="price-section">
+            <span class="price">$19.00</span>
+            <button class="buy-button">BUY</button>
+          </div>
+
+          <button class="watch-trailer">
+            WATCH TRAILER
+            <span class="play-icon"></span>
+          </button>
         </div>
-
-        <button class="watch-trailer">
-          WATCH TRAILER
-          <span class="play-icon"></span>
-        </button>
       </div>
-    </div>
-
     </main>
 
     <!-- FOOTER -->
     <footer>© 2026 MOVIEFLIX. All rights reserved.</footer>
-    
+
     <!-- Spinner -->
     <div class="spinner"></div>
   </body>

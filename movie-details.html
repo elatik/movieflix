@@ -147,20 +147,22 @@
       <div class="movie-detail">
         <div class="movie-header">
           <div class="movie-title-section">
-            <h1 class="movie-title">Movie Title</h1>
-            <p class="movie-genre">Genre</p>
+            <h1 class="movie-title" id="movieTitle">Movie Title</h1>
+            <p class="movie-genre" id="movieGenre">Genre</p>
           </div>
-          <div class="movie-rating"><strong>7.4</strong> <span>/ 10</span></div>
+          <div class="movie-rating">
+            <strong id="movieRating">7.4</strong> <span>/ 10</span>
+          </div>
         </div>
 
         <div class="movie-content">
           <div class="movie-poster">
-            <img src="Images/NoImage.png" alt="Movie Title" />
+            <img id="moviePoster" src="Images/NoImage.png" alt="Movie Title" />
           </div>
 
           <div class="movie-info">
             <h2 class="section-title">About the Movie</h2>
-            <p class="movie-description">
+            <p class="movie-description" id="movieOverview">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam
               nemo obcaecati sunt delectus aut praesentium quaerat suscipit,
               tenetur recusandae. Qui exercitationem iusto nam laudantium id
@@ -172,30 +174,24 @@
             <div class="credits-grid">
               <div class="credit-item">
                 <h4>Actors</h4>
-                <ul>
-                  <li>Actor 1</li>
-                  <li>Actor 2</li>
-                  <li>Actor 3</li>
-                  <li>Actor 4</li>
-                  <li>Actor 5</li>
-                </ul>
-                <span class="more-link">More</span>
+                <ul id="actorsList"></ul>
+                <span class="more-link" id="actorsMoreLink">More</span>
               </div>
 
               <div class="credit-item">
                 <h4>Director</h4>
-                <ul>
+                <ul id="directorList">
                   <li>Director 1</li>
                 </ul>
                 <h4 style="margin-top: 20px">Screenwriter</h4>
-                <ul>
+                <ul id="screenwriterList">
                   <li>Screenwriter 1</li>
                 </ul>
               </div>
 
               <div class="credit-item">
                 <h4>Producers</h4>
-                <ul>
+                <ul id="producersList">
                   <li>Producer 1</li>
                   <li>Producer 2</li>
                 </ul>
@@ -220,7 +216,7 @@
 
     <!-- FOOTER -->
     <footer>© 2026 MOVIEFLIX. All rights reserved.</footer>
-    
+
     <!-- Spinner -->
     <div class="spinner"></div>
   </body>
